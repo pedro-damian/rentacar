@@ -20,6 +20,12 @@ body{
   font-family: 'IBM Plex Mono', monospace, sans-serif;
 }
 
+body .navbar{
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 button, input {
   font-family: 'IBM Plex Mono', monospace;
 }
