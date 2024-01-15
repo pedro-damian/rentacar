@@ -10,36 +10,59 @@
   --color-secundario: #5CFD8D;
 }
 
+
 body{
   display: flex;
-  align-items: center;
+  align-items: center; 
   justify-content: center;
   height: 100vh;
   background-image: linear-gradient(to top right,rgb(176, 246, 179) 10%,rgb(26, 106, 49) 90%);
-  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
   font-family: 'IBM Plex Mono', monospace, sans-serif;
 }
 
+
 body .navbar{
-  position: absolute;
+  position:absolute;
   top: 0;
   width: 100%;
-}
-
-button, input {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+
+/* estilos contenedor de la barra de menu */
+.offcanvas-body .navbar-nav {
+  gap: 2em;
+}
+
+
+/* estilos a los ul de la barra de menu */
+.offcanvas-body .nav-link{
+  color: #fff;
+}
+
+/* estilos al icono de menu */
+.bx {
+  color: #fff;
+  font-size: 24px;
+}
+
+/* button, input {
+  font-family: 'IBM Plex Mono', monospace;
+} */
+
 
 .container-form{
   display: flex;
   /* width: 60%; */
   height: 500px;
   max-width: 900px;
-  /* border: solid thin red; */
   margin: 10px;
   border-radius: 20px;
   box-shadow: 0 5px 7px rgba(0, 0, 0, .1);
   transition: all 1s ease;
+  font-family: 'IBM Plex Mono', monospace, sans-serif;
 }
 
 /* contenedor izquierdo */
@@ -78,7 +101,6 @@ button, input {
   padding: 10px 20px;
   color: #fff;
   cursor: pointer;
-  
   transition: background-color .3s ease;
 }
 
@@ -128,7 +150,6 @@ button, input {
 
 .icons i{
   border-radius: 50%;
-  /* border: solid thin red; */
   padding: 15px;
   cursor: pointer;
   margin: 0 10px;
@@ -197,20 +218,32 @@ button, input {
 
 /* Responsive form */
 
-@media screen and (max-width:750px) {
-  html {
+@media screen and (max-width:800px) {
+  html, button, input {
     font-size: 12px;
+  }
+
+  .container-form {
+    width: 100%;
+    height: 50%;
+  }
+
+  .icons i {
+    font-size: 14px;
+    padding: 10px;
+    margin: 0 10px;
   }
 }
 
-@media screen and (max-width:580px) {
-  html, button, input {
+@media screen and (max-width:550px) {
+  body, button, input {
     font-size: 10px;
   }
 
   .container-form {
     flex-direction: column;
     height: auto;
+    width: 90%;
   }
 
   .container-left {
@@ -230,3 +263,16 @@ button, input {
 
 }
 
+/* medias querys */
+@media (max-width: 990px) {
+  
+
+  .offcanvas-body{
+      background-color: rgb(8, 175, 119);
+  }
+
+  .navbar-nav, .container-login{
+      text-align: center;
+      margin: 2em 0;
+  }
+}

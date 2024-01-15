@@ -1,0 +1,31 @@
+
+body {
+  font-family: 'IBM Plex Mono', monospace, sans-serif;
+}
+
+/* estilos a la barra de navegacion */
+.nav-link{
+  color: #fff;
+}
+
+/* estilos al icono de la hamburguesa */
+.bi {
+  color: #fff;
+}
+
+.navbar-nav {
+  gap: 2em;
+}
+
+
+/* medias querys */
+@media (max-width: 990px) {
+  .offcanvas-body{
+      background-color: rgb(8, 175, 119);
+  }
+
+  .navbar-nav, .container-login{
+      text-align: center;
+      margin: 2em 0;
+  }
+}

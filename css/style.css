@@ -1,0 +1,45 @@
+
+:root{
+    --color-primario: #54AFFF;
+    --color-secundario: #5db86b;
+  }
+
+body {
+    font-family: 'IBM Plex Mono', monospace, sans-serif;
+}
+
+/* estilos a la barra de navegacion */
+.nav-link{
+    color: #fff;
+}
+
+/* estilos al icono de la hamburguesa */
+.bi {
+    color: #fff;
+}
+
+.navbar-nav {
+    gap: 2em;
+}
+
+main {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+/* medias querys */
+@media (max-width: 990px) {
+    .offcanvas-body{
+        background-color: rgb(8, 175, 119);
+        
+    }
+
+    .navbar-nav, .container-login{
+        text-align: center;
+        margin: 2em 0;
+    }
+
+}
