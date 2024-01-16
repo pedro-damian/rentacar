@@ -41,5 +41,11 @@ main {
         text-align: center;
         margin: 2em 0;
     }
+}
 
+
+@media screen and (max-width:550px) {
+    body, button, input {
+      font-size: 12px;
+    }
 }

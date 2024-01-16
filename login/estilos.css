@@ -16,7 +16,7 @@ body{
   align-items: center; 
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(to top right,rgb(176, 246, 179) 10%,rgb(26, 106, 49) 90%);
+  /* background-image: linear-gradient(to top right,rgb(176, 246, 179) 10%,rgb(26, 106, 49) 90%); */
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
   font-family: 'IBM Plex Mono', monospace, sans-serif;
@@ -55,7 +55,6 @@ body .navbar{
 
 .container-form{
   display: flex;
-  /* width: 60%; */
   height: 500px;
   max-width: 900px;
   margin: 10px;
