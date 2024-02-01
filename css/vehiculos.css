@@ -1,14 +1,13 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace, sans-serif;
+  margin-top: 3rem;
 }
 
-/* estilos a la barra de navegacion */
-.nav-link{
+.nav-link {
   color: #fff;
 }
 
-/* estilos al icono de la hamburguesa */
 .bi {
   color: #fff;
 }
@@ -17,19 +16,103 @@ body {
   gap: 2em;
 }
 
+.btn-transparente {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: transparent;
+}
 
-/* medias querys */
+.btn-transparente:focus,
+.btn-transparente:active {
+  color: #785aff;
+  border-color: #007bff;
+  box-shadow: none;
+}
+
+.categoria-link {
+  text-decoration: none;
+  color: #000;
+  margin-right: 10px;
+  position: relative;
+}
+
+.separador {
+  border: 3px solid #000;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.categoria-link:hover {
+  color: #6556f1;
+}
+
 @media (max-width: 990px) {
-  .offcanvas-body{
-      background-color: rgb(8, 175, 119);
+  .offcanvas-body {
+    background-color: rgb(8, 175, 119);
   }
 
-  .navbar-nav, .container-login{
-      text-align: center;
-      margin: 2em 0;
+  .navbar-nav,
+  .container-login {
+    text-align: center;
+    margin: 2em 0;
   }
+}
 
-  footer {
-    font-size: 10px;
-  }
+.seccion-titulo {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.separador {
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+
+.btn-seccion {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  margin-right: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-seccion.selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vehiculo {
+  background-color: #bdb8b867;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow: hidden;
+  flex: 0 1 calc(30% - 20px);
+}
+
+.vehiculo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.h2,
+.descripcion,
+.precio {
+  margin-bottom: 10px;
+}
+
+.img {
+  width: 400px;
+  height: 400px;
 }

@@ -1,6 +1,7 @@
 
 body {
   font-family: 'IBM Plex Mono', monospace, sans-serif;
+  
 }
 
 /* estilos a la barra de navegacion */
@@ -28,4 +29,54 @@ body {
       text-align: center;
       margin: 2em 0;
   }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  margin-top: 3rem;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.vehiculo {
+  background-color: #bdb8b867;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  overflow: hidden;
+  flex: 0 1 calc(30% - 20px);
+}
+.vehiculo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+h2, .descripcion, .precio {
+  margin-bottom: 10px;
+}
+.reserva-btn {
+  background-color: #4c9ae4;
+  color: #000000;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin-top: 10px;
+  
+}
+.precio{
+  color: rgb(233, 18, 18)
+
+}
+.reserva-btn:hover {
+  background-color: #115580;
 }

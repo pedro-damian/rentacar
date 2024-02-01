@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link a bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <!-- iconos de bootstrap 5 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- google fonts : IBM Plex Mono -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/formulario_reservas.css">
+
+  <title>Rentacar | Inicio</title>
+</head>
+
+
+<style>
+
+  /* estilos a la barra de navegacion */
+  .nav-link {
+    color: #fff;
+  }
+
+  /* estilos al icono de la hamburguesa */
+  .bi {
+    color: #fff;
+  }
+
+  .navbar-nav {
+    gap: 2em;
+  }
+
+
+  img {
+    height: 100%;
+    width: 85%
+  }
+
+  header {
+    position: relative;
+    text-align: center;
+    color: rgb(253, 252, 252);
+    margin: 100px;
+  }
+
+  header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+
+
+
+  img {
+    background-image: url('img/imgfondo.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+
+
+  main {
+    max-width: 1100px;
+    margin: 200px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+  }
+</style>
+
+
+<body>
+  <!--############################################## CABECERA #####################################################-->
+  <nav class="navbar navbar-expand-lg bg-primary">
+
+    <div class="container">
+
+      <!-- logo de la empresa -->
+      <a class="navbar-brand text-white" href="#"><strong>RentaCar<span class="text-warning">Plus</span></strong></a>
+
+      <!-- boton hamburguesa -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <!-- barra de menu -->
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header bg-primary">
+          <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel"><strong>RentaCar<span
+                class="text-warning">Plus</span></strong></h5>
+          <!-- <button type="button " class="btn-close text-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>-->
+        </div>
+        <div class="offcanvas-body">
+
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vehiculos.html">Vehiculos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reservas.html">Reservas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+          </ul>
+          <div class="container-login">
+            <a class="btn btn-outline-light rounded-pill" href="./login/login.html" role="button">Registro | Login</a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Has tu reserva ya!</h1>
+    <img src="/img/imgfondo.jpg" alt="imagen">
+  </header>
+
+  <main>
+    <form action="procesar_reserva.php" method="post">
+      <label for="fecha">Fecha de Alquiler:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="fecha">Fecha de devoluciòn:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="vehiculo">Seleccionar Vehículo:</label>
+      <select id="vehiculo" name="vehiculo" required>
+        <option value="auto">Auto</option>
+        <option value="camioneta">Camioneta</option>
+        <option value="moto">Renault sedan</option>
+        <option value="Renault kia">Renault kia</option>
+        <option value="Renault suv">Renault suv</option>
+        <option value="Renault kwid">Renault kwid</option>
+        <option value="Renault oroch">Renault oroch</option>
+        <option value="Renault captu">Renault captu</option>
+      </select>
+
+      <button type="submit">Comenzar Reservar</button>
+    </form>
+  </main>
+
+  <main>
+    <form action="procesar_reserva.php" method="post" class="my-5">
+      <div class="form-group">
+        <label for="campo1">Nombres:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="campo1">Apellidos:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tipoDocumento">Tipo de documento:</label>
+        <select class="form-control" id="tipoDocumento" name="tipoDocumento" required>
+          <option value="DNI">DNI</option>
+          <option value="PASAPORTE">Pasaporte</option>
+          <option value="CARNE_ESTRANJERIA">Carné de Extranjería</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="datosDocumento">Datos del documento:</label>
+        <input type="text" class="form-control" id="datosDocumento" name="datosDocumento" required>
+      </div>
+
+      <div class="form-group">
+        <label for="campo1">Correo Electrónico:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="campo1">Teléfono o celular:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="pais">País de Origen:</label>
+        <select class="form-control" id="pais" name="pais" required>
+          <option value="ARG">Argentina</option>
+          <option value="BRA">Brasil</option>
+          <option value="PER">Perú</option>
+          <option value="CHI">Chile</option>
+          <option value="VEN">Venezuela</option>
+          <option value="COL">Colombia</option>
+          <option value="ECU">Ecuador</option>
+          <option value="BOL">Bolivia</option>
+          <option value="URU">Uruguay</option>
+          <option value="PAR">Paraguay</option>
+
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="campo1">Ciudad:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+      <div class="form-group">
+        <label for="campo1">Dirección de domicilio:</label>
+        <input type="text" class="form-control" id="campo1" name="campo1" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Reservar</button>
+    </form>
+
+    <div class="bg-light p-4 my-5">
+      <h3>Resumen de Pago</h3>
+
+      <div class="mb-3">
+        <label for="costoAlquiler">Costo total por días de alquiler del auto:</label>
+        <input type="text" class="form-control" id="costoAlquiler" name="costoAlquiler" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="costoServicio">Costo del servicio:</label>
+        <input type="text" class="form-control" id="costoServicio" name="costoServicio" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="igv">IGV:</label>
+        <input type="text" class="form-control" id="igv" name="igv" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="total">Total:</label>
+        <input type="text" class="form-control" id="total" name="total" readonly>
+      </div>
+
+      <div class="form-check mb-3">
+        <input type="checkbox" class="form-check-input" id="terminos" name="terminos" required>
+        <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+      </div>
+
+      <button type="submit">Completar Reserva</button>
+    </div>
+  </main>
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <body>
+
+    <html>
